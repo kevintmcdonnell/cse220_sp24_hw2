@@ -50,3 +50,11 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Others
+build/
+asan.log.*
+vgcore.*
+tests/actual_outputs
+*.zip
+.vscode/settings.json
