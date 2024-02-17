@@ -17,6 +17,7 @@ int run_using_valgrind(const char *args) {
 }
 
 int run_using_system(const char *args) {
+    assert(file_exists("./build/hw2_main"));
     (void)sprintf(cmd, "./build/hw2_main %s", args);
 	return system(cmd);
 }
