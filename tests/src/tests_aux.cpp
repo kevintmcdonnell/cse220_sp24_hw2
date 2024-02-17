@@ -1,5 +1,8 @@
 #include "tests_aux.h"
 
+char cmd[300];
+char pargs[300];
+
 bool file_exists(const char *path) {
     return (access(path, F_OK) == 0);
 }
@@ -9,13 +12,11 @@ void expect_no_valgrind_errors(int status) {
 }
 
 int run_using_valgrind(const char *args) {
-    char cmd[500];
     sprintf(cmd, "valgrind --quiet -s --leak-check=full --show-leak-kinds=all --track-origins=yes --trace-children=yes --error-exitcode=37 ./build/hw2_main %s", args);
 	return system(cmd);
 }
 
 int run_using_system(const char *args) {
-    char cmd[500];
     (void)sprintf(cmd, "./build/hw2_main %s", args);
 	return system(cmd);
 }
@@ -23,7 +24,6 @@ int run_using_system(const char *args) {
 void check_image_file_contents(const char *expected_file, const char *actual_file) {
     assert(file_exists(expected_file));
     if (file_exists(actual_file)) {
-        char cmd[500];
         system("/usr/bin/bash -c \"rm -f /tmp/exp.txt /tmp/exp_single_line.txt /tmp/act.txt /tmp/act_single_line.txt\"");
         sprintf(cmd, "cp %s /tmp/exp.txt; cp %s /tmp/act.txt", expected_file, actual_file);
         system(cmd);
