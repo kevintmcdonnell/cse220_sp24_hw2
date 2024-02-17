@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <unistd.h> 
 
 int main(int argc, char **argv) {
     (void)argc;
