@@ -17,13 +17,11 @@ endif()
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
-add_library(common INTERFACE)
-
 
 # Build main executable
 add_executable(hw2_main src/hw2_main.c)
 target_compile_options(hw2_main PUBLIC -gdwarf-4 -Wall -Wextra -Wshadow -Wpedantic -Wdouble-promotion -Wformat=2 -Wundef -Werror)
-target_link_libraries(hw2_main PRIVATE common)
+target_link_libraries(hw2_main PRIVATE m)
 target_include_directories(hw2_main PUBLIC include)
 
 # Build a single executable with all the tests. Used during development only, not on CodeGrade.
