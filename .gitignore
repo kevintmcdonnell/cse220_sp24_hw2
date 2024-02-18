@@ -57,4 +57,3 @@ asan.log.*
 vgcore.*
 tests/actual_outputs
 *.zip
-.vscode/settings.json
