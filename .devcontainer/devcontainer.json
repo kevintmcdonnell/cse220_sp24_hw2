@@ -11,7 +11,7 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-vscode.cmake-tools",
-        "vadimcn.vscode-lldb",
+        //"vadimcn.vscode-lldb",
         "ngtystr.ppm-pgm-viewer-for-vscode",
         //"llvm-vs-code-extensions.vscode-clangd",
         //"usernamehw.errorlens"
