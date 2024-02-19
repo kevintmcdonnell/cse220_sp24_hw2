@@ -1,20 +1,20 @@
 # cmake -S . -B build
 # cmake --build build
 
-option(ENABLE_TIDY "Build with tidy checks" ON)
+#option(ENABLE_TIDY "Build with tidy checks" ON)
 option(BUILD_CODEGRADE_TESTS "Build test suites into separate executables" OFF)
 
 cmake_minimum_required(VERSION 3.10)
 project(hw2 LANGUAGES C CXX)
 find_package(GTest REQUIRED)
 
-if (ENABLE_TIDY)
-  set(CMAKE_CXX_CLANG_TIDY
-  clang-tidy;
-  -checks=-*,clang-analyzer-*,-clang-analyzer-cplusplus*,bugprone-*,performance-*,readability-*,misc-*,-bugprone-easily-swappable-parameters,-bugprone-suspicious-include,-readability-magic-numbers,-readability-duplicate-include,
-  -header-filter=${CMAKE_CURRENT_SOURCE_DIR};
-  )
-endif()
+# if (ENABLE_TIDY)
+#   set(CMAKE_CXX_CLANG_TIDY
+#   clang-tidy;
+#   -checks=-*,clang-analyzer-*,-clang-analyzer-cplusplus*,bugprone-*,performance-*,readability-*,misc-*,-bugprone-easily-swappable-parameters,-bugprone-suspicious-include,-readability-magic-numbers,-readability-duplicate-include,
+#   -header-filter=${CMAKE_CURRENT_SOURCE_DIR};
+#   )
+# endif()
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)

@@ -13,8 +13,8 @@
         "ms-vscode.cmake-tools",
         "vadimcn.vscode-lldb",
         "ngtystr.ppm-pgm-viewer-for-vscode",
-        "llvm-vs-code-extensions.vscode-clangd",
-        "usernamehw.errorlens"
+        //"llvm-vs-code-extensions.vscode-clangd",
+        //"usernamehw.errorlens"
       ]
     }
   }
