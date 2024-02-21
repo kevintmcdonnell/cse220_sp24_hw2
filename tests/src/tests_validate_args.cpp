@@ -8,6 +8,7 @@
 class validate_args_TestSuite : public testing::Test { 
 	void SetUp() override {
         system("rm -rf ./tests/actual_outputs");
+		system("rm -f /tmp/exp_single_line.txt and /tmp/act_single_line.txt");
 		mkdir("./tests/actual_outputs/", 0700);
 	}
 };
